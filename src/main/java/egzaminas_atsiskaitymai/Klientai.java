@@ -17,11 +17,11 @@ public class Klientai {
 	public int flag_fizinis;
 	
 	public Klientai() {
-		super();
+		// super();
 	}	
 
 	public Klientai(int id, String pav, int flag_fizinis) {
-		super();
+		// super();
 		this.id = id;
 		this.pav = pav;
 		this.flag_fizinis = flag_fizinis;
