@@ -53,7 +53,7 @@ public class SaskaitosController {
 		    
 		    System.out.println ( apmokejimas.getData() + " " + apmokejimas.getSuma() + " " +  apmokejimas.getSaskaitos_id() );
 
-		    // saskaitos_repository.save ( saskaita );
+		    apmokejimai_repository.save ( apmokejimas );
 		    res = "Saugoti";  
 		}		
     	model.addAttribute("saskaitos", saskaitos_repository.findByKlientaiId( kid ) );
