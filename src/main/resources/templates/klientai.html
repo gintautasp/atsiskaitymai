@@ -103,6 +103,7 @@
 		<tr th:each="klientas : ${klientai}">
 			<td th:text="${klientas.getPav()}"></td>
 			<td th:text="${klientas.getFlag_fizinis()}"></td>
+			<td><a th:href="@{/saskaitos(kid=${klientas.getId()})}">sąskaitos</a></td>
 			<td><input type="button" class="delete" th:attr="data-el_id=${klientas.getId()}" value="&#10006"></td>				
 		</tr>
 	</table>
