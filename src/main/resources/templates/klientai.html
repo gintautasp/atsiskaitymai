@@ -4,6 +4,7 @@
 	<title>Klientai</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="main.css">	
 	
 	<style>
 		label, input { display:block; }
@@ -97,6 +98,11 @@
   	</script>	
 </head>
 <body>
+	<div>
+	    <nav>
+		<a th:each="menu_item : ${lst_menu}" th:href="${menu_item.itemurl()}" th:text="${menu_item}"></a>
+	    </nav>
+	</div>
 	<h3>Klientai</h3>
 	
 	<table>

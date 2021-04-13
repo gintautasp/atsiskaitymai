@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Klientai</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="main.css">
+<body>
+	<div>
+	    <nav>
+		<a th:each="menu_item : ${lst_menu}" th:href="${menu_item.itemurl()}" th:text="${menu_item}"></a>
+	    </nav>
+	</div>
+	<h3>Skolininkai</h3>
+</body>
+</html>	

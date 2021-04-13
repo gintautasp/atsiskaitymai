@@ -17,7 +17,7 @@ public class KlientaiRepositoryTest {
 	    private KlientaiRepository klientai_repository;
 	   
 	    @Test
-	    public void testSaveGetProduktai() {
+	    public void testSaveGetKlientai() {
 
 	        																			     // System.out.println (" starting here test ! ");    	
 	        Klientai klientai = new Klientai( 0, "Šilas", 0 );
@@ -39,7 +39,7 @@ public class KlientaiRepositoryTest {
 	    }
 	    
 	    @Test   
-	    public void testFindAllProduktai() {
+	    public void testFindAllKlientai() {
 	        assertNotNull(klientai_repository.findAll());
 	    }
 	    
@@ -54,7 +54,7 @@ public class KlientaiRepositoryTest {
 	    }    
 
 	    @Test
-	    public void deletByProduktaiIdTest() {
+	    public void deletByKlientaiIdTest() {
 	    	
 			Klientai client_as = null;
 	        Klientai klientai = new Klientai( 0, "Šilas", 0 );

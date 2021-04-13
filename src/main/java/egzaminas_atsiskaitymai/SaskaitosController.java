@@ -55,7 +55,8 @@ public class SaskaitosController {
 
 		    apmokejimai_repository.save ( apmokejimas );
 		    res = "Saugoti";  
-		}		
+		}
+        model.addAttribute("lst_menu", Meniu.values() );
     	model.addAttribute("saskaitos", saskaitos_repository.findByKlientaiId( kid ) );
     	model.addAttribute("res", res );
     	    	
