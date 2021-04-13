@@ -10,12 +10,25 @@ import java.util.Optional;
 
 import org.junit.jupiter.api.Test;
 
+/**
+* <h1>Duomenų bazės klientų repositorijos testas</h1>
+* klase skirta klientų lentelės duomenų issaugojimui, nuskaitymui, salinimui patestuoti
+* <p>
+* atliekami visi būtini CRUD testai
+* 
+* @author  Zara Ali
+* @version 1.0
+* @since   2021-03-31 
+*/
 @SpringBootTest
 public class KlientaiRepositoryTest {
 	
 	   @Autowired
 	    private KlientaiRepository klientai_repository;
 	   
+	    /**
+	     * tikrinamas Klientu informacijos issaugojimas
+	     */
 	    @Test
 	    public void testSaveGetKlientai() {
 
@@ -38,11 +51,17 @@ public class KlientaiRepositoryTest {
 	        																		         // System.out.println (" ending here test ! ");
 	    }
 	    
+	    /**
+	     * tikriname ar nuskaitomas Klientų sarasas
+	     */	    
 	    @Test   
 	    public void testFindAllKlientai() {
 	        assertNotNull(klientai_repository.findAll());
 	    }
 	    
+	    /**
+	     * tikriname ar galima pasalinti pagal pavadinimą
+	     */		    
 	    @Test    
 	    public void deleteFoundedByName() {
 	        																			// System.out.println (" kt6 ! ");       
@@ -51,8 +70,11 @@ public class KlientaiRepositoryTest {
 			klientai_repository.delete( client );                  					    // -- pagal pavyzdį neveikia  :(  
 	        client = klientai_repository.findByPav("Šilas");
 	        assertEquals( client, null );		
-	    }    
-
+	    }  
+	    
+	    /**
+	     * tikriname ar alima pasalinti pagal id
+	     */		   
 	    @Test
 	    public void deletByKlientaiIdTest() {
 	    	

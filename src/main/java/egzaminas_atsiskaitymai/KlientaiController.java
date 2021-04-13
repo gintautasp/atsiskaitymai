@@ -44,7 +44,7 @@ public class KlientaiController {
 				   
 				} else {
 					
-					res = "Klaida įrašas galėjoi būti pašalintas";
+					res = "Klaida irasas galejo būti pasalintas";
 				}
 			}	
 			
